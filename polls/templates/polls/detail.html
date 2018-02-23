@@ -1,0 +1,7 @@
+<h1>{{ target.terget_id }}</h1>
+<ul>
+<p>Nearest Neighbors:</p>
+{% for neighbor in target.neighbor_set.all  %}
+    <li><a href={{neighbor.sdss_link}}>{{ neighbor.neighbor_id}}</a></li>
+{% endfor %}
+</ul>

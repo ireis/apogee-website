@@ -1,0 +1,10 @@
+{% if target_list %}
+    <p>Click on an APOGEE ID to get the nearest neighbors.</p>
+    <ul>
+    {% for target in target_list %}
+        <li><a href="{%  url 'detail' target.target_id  %}">{{ target.target_id}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Did not find a matching APOGEE ID.</p>
+{% endif %}
